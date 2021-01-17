@@ -35,7 +35,7 @@ Hugswap是一个基于Heco Chain（Huobi ECO Chain）的自动代币交换协议
 
 	.
 	├── 000_deploy_multicall.ts         // 部署multicall合约
-	├── 001_deploy_hugwap_factory.ts    // 部署factory合约
+	├── 001_deploy_hugswap_factory.ts    // 部署factory合约
 	└── 002_deploy_hugswap_router.ts    // 部署router合约
 
  按照编号依次在项目根目录下执行脚本，其中network参数可填入：heco（主网）、heco_test（测试网），对应部署在指定网络上。

@@ -35,6 +35,9 @@ const config: HardhatUserConfig = {
     networks: {
         heco_test: {
             url: node_url('heco_test'),
+        },
+        heco: {
+            url: node_url('heco'),
         }
     },
 }

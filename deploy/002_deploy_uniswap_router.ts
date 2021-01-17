@@ -13,7 +13,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         from:adeployer,
         log:true,
         deterministicDeployment: false,
-        args:[getHugswapAddress(),account("WETH_ADDRESS")]
+        args:[getHugswapAddress(),account("WHT_ADDRESS")]
       }
     );
     save_to_json("HugswapRouter",{"address":deployResult.address,"tx":deployResult.transactionHash});

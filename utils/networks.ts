@@ -6,7 +6,7 @@ export function deployer(): string {
 }
 
 export function node_url(networkName: string): string {
-   const uri = process.env["TEST_NETWORK_RPC_" + networkName.toUpperCase()];
+   const uri = process.env["NET_WORK_RPC_" + networkName.toUpperCase()];
     if (uri && uri !== '') {
         return uri;
     }

@@ -6,3 +6,4 @@ artifacts
 /.idea/
 /.env
 /package-lock.json
+/deploy_result.json

@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
-export function deployer(networkName: string): string {
-    const private_key = process.env["FACTORY_DEPLOY_PRIVATE_KEY_" + networkName.toUpperCase()];
+export function deployer(): string {
+    const private_key = process.env["FACTORY_DEPLOY_PRIVATE_KEY"];
     return private_key;
 }
 
@@ -10,4 +10,9 @@ export function node_url(networkName: string): string {
     if (uri && uri !== '') {
         return uri;
     }
+}
+
+export function account(account:string): string {
+    const address = process.env[account];
+    return address;
 }

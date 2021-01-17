@@ -20,7 +20,7 @@ library HugswapLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'590000bb401d0d17794a75ad401dc3dddf361891bba58081a4896704d393330b' // init code hash
+                hex'{{initcode}}' // init code hash
             ))));
     }
 

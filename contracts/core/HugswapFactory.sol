@@ -20,6 +20,11 @@ contract HugswapFactory is IHugswapFactory {
         return allPairs.length;
     }
 
+    // get init code
+    function getInitCode() external pure returns(bytes32 codeHash) {
+        codeHash = keccak256(type(HugswapPair).creationCode);
+    }
+
     function createPair(address tokenA, address tokenB) external returns (address pair) {
         require(tokenA != tokenB, 'Hugswap: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);

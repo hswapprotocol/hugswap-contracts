@@ -1,7 +1,8 @@
-require("@nomiclabs/hardhat-waffle");
+require('dotenv').config()
+
 import 'hardhat-deploy';
-import {HardhatUserConfig} from 'hardhat/types';
-import 'dotenv/config';
+import { HardhatUserConfig } from 'hardhat/types'
+import '@nomiclabs/hardhat-waffle'
 import {node_url, deployer} from './utils/networks';
 
 const config: HardhatUserConfig = {
@@ -21,6 +22,12 @@ const config: HardhatUserConfig = {
                 version:"0.5.16",
                 settings:{
                     evmVersion:"istanbul"
+                }
+            },
+            {
+                version:"0.4.18",
+                settings:{
+                evmVersion:"istanbul"
                 }
             },
         ]

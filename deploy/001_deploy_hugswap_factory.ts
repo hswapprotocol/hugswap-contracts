@@ -23,7 +23,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     save_to_json("HugswapFactory",{"address":deployResult.address,"tx":deployResult.transactionHash});
     let init_code_hash = await read('HugswapFactory', 'getInitCode');
     init_code_hash = init_code_hash.replace("0x", "");
-    save_to_json("InitCodehash",init_code_hash.replace("0x", ""));
+    save_to_json("InitCodehash",init_code_hash);
     await injectRouterV2(init_code_hash);
 }
 
